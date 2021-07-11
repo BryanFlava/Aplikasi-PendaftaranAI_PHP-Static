@@ -1,0 +1,1 @@
+# aplikasi-pendaftaran-lomba-ai
