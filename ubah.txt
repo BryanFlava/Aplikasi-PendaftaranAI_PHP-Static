@@ -1,0 +1,59 @@
+<?php
+include "koneksi.php";
+$sql = mysqli_query($koneksi, "SELECT * from peserta where kode = '" . $_GET['kode'] . "'");
+$data = mysqli_fetch_array($sql);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>Update Data</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        <div class="contact-form">
+            <h1>Ubah Data </h1>
+            <div class="txtb">
+                <label>Username</label>
+                <input type="text" name="username" value="<?php echo $data['username']; ?>">
+            </div>
+
+            <div class="txtb">
+                <label>Nama Kelas </label>
+                <input type="text" name="sekolah" value="<?php echo $data['sekolah']; ?>">
+            </div>
+
+            <div class="txtb">
+                <label>Alamat </label>
+                <input type="text" name="alamat" value="<?php echo $data['alamat']; ?>">
+            </div>
+
+            <input type="hidden" name="kode" value="<?php echo $data['kode']; ?>">
+            <input type="submit" class="btn" name="proses" value="Ubah">
+    </form>
+
+</html>
+</body>
+
+</html>
+
+<?php
+include "koneksi.php";
+
+if (isset($_POST['proses'])) {
+    $tes = mysqli_query($koneksi, "UPDATE peserta SET
+username = '" . $_POST['username'] . "' ,
+sekolah = '" . $_POST['sekolah'] . "',
+alamat = '" . $_POST['alamat'] . "'
+WHERE kode = '" . $_POST['kode'] . "'");
+    header("Location: tampilan-data.php");
+}
+
+?>

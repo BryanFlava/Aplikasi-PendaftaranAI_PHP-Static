@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1aff;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    width: calc(100%-20px);
+    max-width: 500px;
+    background-color: white;
+    padding: 50px 40px;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin: 48px 0;
+    font-size: 36px;
+    color: black;
+}
+
+.login-form h3 {
+    text-align: center;
+    margin: 48px 0;
+}
+
+.textb {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.textb input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    background-color: rgb(216, 222, 233);
+    border-radius: 4px;
+    color: rgb(4, 4, 43);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 60px 0 10px;
+}
+
+.placeholder {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(146, 147, 148);
+    position: absolute;
+    line-height: 70px;
+    top: 0;
+    left: 20px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.show-password {
+    position: absolute;
+    right: 20px;
+    line-height: 70px;
+    color: rgb(157, 157, 172);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.textb input:focus~.placeholder,
+.textb input:valid~.placeholder {
+    left: 10px;
+    top: -10px;
+}
+
+.btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+    background-color: tomato;
+    color: rgb(94, 81, 81);
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.btn:hover {
+    opacity: .30;
+}
+
+.login-form a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    color: rgb(24, 20, 24);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: .2s linear;
+}
+
+.login-form a:hover {
+    color: rgb(8, 8, 8);
+}
+
+.btn:disabled {
+    background-color: transparent;
+}
