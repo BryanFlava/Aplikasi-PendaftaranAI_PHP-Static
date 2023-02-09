@@ -1,1 +1,1 @@
-# aplikasi-pendaftaran-lomba-ai
+## Aplikasi-PendaftaranAI_PHP-Static
